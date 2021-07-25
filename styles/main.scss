@@ -22,7 +22,13 @@ body {
 }
 
 h5 {
+  font-size: 1.2em;
   margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: $white;
 }
 
 .container {
@@ -35,9 +41,10 @@ h5 {
 }
 
 .title {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  margin: 2em;
   width: 100%;
 }
 
@@ -76,9 +83,12 @@ h5 {
 }
 
 .tip-item {
+  align-self: center;
   background-color: $veryDarkCyan;
   border-radius: 0.3em;
   color: $white;
+  font-size: 1.2em;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +96,6 @@ h5 {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   justify-content: center;
-  align-self: center;
   width: calc((100% - 1.5em) / 2);
 }
 
@@ -104,7 +113,6 @@ h5 {
 }
 
 // input styles
-
 .input-icon {
   display: flex;
   flex-direction: row;
@@ -125,8 +133,9 @@ h5 {
   border-radius: 0.5em;
   color: $darkGrayishCyan1;
   font-family: 'Space Mono', monospace;
-  font-size: 1em;
-  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 0.7em;
   text-align: right;
   flex: 1;
   .txt-input:focus {
@@ -148,6 +157,7 @@ h5 {
 
 input::placeholder {
   color: $darkGrayishCyan1;
+  font-weight: 700;
 }
 
 input:focus {
@@ -159,12 +169,47 @@ input:focus {
   background-color: $veryDarkCyan;
   border-radius: 0.8em;
   margin: 1em;
+  min-width: 338px;
+}
+
+.row-amount {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.item-amount {
+  flex: 1;
+  padding: 1em;
+  width: 0;
+}
+
+.amount-qty {
+  color: $strongCyan;
+  font-size: 2em;
+}
+
+.btn-reset {
+  background-color: $strongCyan;
+  border: none;
+  border-radius: 0.3em;
+  color: $veryDarkCyan;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  padding: 1em;
+  width: 100%;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 // tablets, desktop
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .title {
-    width: 70%;
+    width: 55%;
   }
 
   .tip-item {
@@ -175,7 +220,8 @@ input:focus {
   .row {
     border-radius: 0.8em;
     flex-flow: row nowrap;
-    width: 70%;
+    width: 55%;
+    min-width: 685px;
   }
 
   .row-item {
