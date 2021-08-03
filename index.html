@@ -22,28 +22,34 @@
         <div class="row-item operations">
           <div class="bill">
             <h5>Bill</h5>
+            <p class="error" id="error-bill">Can´t be zero</p>
             <div class="input-icon">
               <img
                 class="icon"
                 src="./images/icon-dollar.svg"
                 alt="dolar-icon"
               />
-              <input type="text" class="txt-input" placeholder="0.00" />
+              <input
+                type="text"
+                class="txt-input"
+                id="bill"
+                placeholder="0.00"
+              />
             </div>
           </div>
           <div class="tips">
             <h5>Select Tip %</h5>
             <div class="tips-list">
-              <div class="tip-item percent-box">5%</div>
-              <div class="tip-item percent-box">10%</div>
-              <div class="tip-item percent-box">15%</div>
-              <div class="tip-item percent-box">25%</div>
-              <div class="tip-item percent-box">50%</div>
+              <div class="tip-item percent-box" id="five-tip">5%</div>
+              <div class="tip-item percent-box" id="ten-tip">10%</div>
+              <div class="tip-item percent-box" id="fifteen-tip">15%</div>
+              <div class="tip-item percent-box" id="twentyfive-tip">25%</div>
+              <div class="tip-item percent-box" id="fifty-tip">50%</div>
               <div class="tip-item custom-tip-item">
                 <input
                   type="text"
                   class="txt-input"
-                  id="custom-input-tip"
+                  id="custom-tip"
                   placeholder="Custom"
                 />
               </div>
@@ -52,13 +58,19 @@
 
           <div class="number-people">
             <h5>Number of People</h5>
+            <p class="error" id="error-npeople">Can´t be zero</p>
             <div class="input-icon">
               <img
                 class="icon"
                 src="./images/icon-person.svg"
                 alt="dolar-icon"
               />
-              <input type="text" class="txt-input" placeholder="0" />
+              <input
+                type="text"
+                id="people-number"
+                class="txt-input"
+                placeholder="0"
+              />
             </div>
           </div>
         </div>
@@ -68,22 +80,23 @@
               <h3>Tip Amount</h3>
               <p>/ person</p>
             </div>
-            <div class="item-amount amount-qty">$00.00</div>
+            <div class="item-amount amount-qty" id="tip-person">$0.00</div>
           </div>
           <div class="row-amount">
             <div class="item-amount">
               <h3>Total</h3>
               <p>/ person</p>
             </div>
-            <div class="item-amount amount-qty">$00.00</div>
+            <div class="item-amount amount-qty" id="total-tip">$0.00</div>
           </div>
           <div class="row-amount">
             <div class="item-amount">
-              <button class="btn-reset">RESET</button>
+              <button id="btn-reset" class="btn-reset">RESET</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script defer src="./js/app.js"></script>
   </body>
 </html>

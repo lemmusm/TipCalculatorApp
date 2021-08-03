@@ -104,12 +104,23 @@ h3 {
   padding-top: 0;
   padding-bottom: 0;
 }
+#custom-tip {
+  border-radius: 0.3em;
+  font-size: 1em;
+  padding: 0.25em;
+  width: 90%;
+}
 
 .percent-box {
   &:hover {
     background-color: $strongCyan;
     color: $veryDarkCyan;
   }
+}
+
+.selected {
+  background-color: $strongCyan;
+  color: $veryDarkCyan;
 }
 
 // input styles
@@ -141,6 +152,14 @@ h3 {
   .txt-input:focus {
     outline: none;
   }
+}
+
+.error {
+  display: none;
+  font-size: 0.8em;
+  color: red;
+  padding-right: 1em;
+  text-align: right;
 }
 
 #custom-input-tip {
@@ -192,18 +211,20 @@ input:focus {
 }
 
 .btn-reset {
-  background-color: $strongCyan;
+  background-color: $darkGrayishCyan1;
   border: none;
   border-radius: 0.3em;
   color: $veryDarkCyan;
-  cursor: pointer;
+  cursor: not-allowed;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   padding: 1em;
   width: 100%;
-  &:hover {
-    opacity: 0.8;
-  }
+}
+
+.btn-selected {
+  background-color: $strongCyan;
+  cursor: pointer;
 }
 
 // tablets, desktop
